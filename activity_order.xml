@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.cebs.pingfood.OrderActivity"
+    >
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/orderList"
+        android:textSize="15dp"
+        android:textColor="@color/white"
+        ></ListView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:id="@+id/txtTotal"
+        android:text="Total"
+        android:layout_marginBottom="47dp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="5dp"
+        android:textColor="@color/colorPrimary"
+        />
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Place Order"
+        android:background="@color/back"
+        android:layout_gravity="bottom|right"
+        android:id="@+id/orderPlace"
+        android:textSize="15dp"
+        android:textColor="@color/white"
+         />
+</android.support.design.widget.CoordinatorLayout>
+

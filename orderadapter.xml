@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item Name"
+            android:id="@+id/itemName"
+            android:textSize="20dp"
+            android:layout_gravity="left"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_remove"
+                android:onClick="minus"
+                android:background="@color/white"
+                android:visibility="gone"
+
+                />
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/qty"
+                android:text="1"
+                android:textAlignment="center"
+                android:inputType="number"
+                android:visibility="gone"
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add"
+                android:background="@color/white"
+                android:visibility="gone"
+                android:onClick="add"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/itemPrice"
+            android:textSize="18dp"
+         />
+        <ToggleButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:textOff=""
+            android:textOn=""
+            android:background="@drawable/check"
+            android:id="@+id/btnEdit"
+            android:layout_marginLeft="50dp"
+
+
+            />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:src="@drawable/ic_remove"
+            android:id="@+id/btnRemove"
+            android:background="@color/white"
+
+             />
+
+
+    </GridLayout>
+</LinearLayout>
+
+
+

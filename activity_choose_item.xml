@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:id="@+id/banner"
+        android:background="@drawable/food"
+        android:layout_weight="0.82">
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/banner"
+        android:layout_gravity="bottom"
+        android:id="@+id/items"
+        >
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_restaurant"
+        android:id="@+id/logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/lblName"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/lblDescription"
+        android:layout_below="@+id/lblName"
+        android:layout_toEndOf="@+id/logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/lblPrice"
+        android:layout_below="@+id/lblDescription"
+        android:layout_toEndOf="@+id/logo" />
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblPrice"
+        android:orientation="horizontal"
+        android:id="@+id/linearlayout"
+        android:gravity="left|center"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/logo"
+        android:weightSum="1">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_remove"
+            android:onClick="minus"
+            android:background="@color/white"
+
+            />
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/qty"
+            android:text="1"
+            android:textAlignment="center"
+            android:inputType="number"
+            />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add"
+            android:background="@color/white"
+            android:onClick="add"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="0.00"
+            android:id="@+id/lblTotal"
+            android:gravity="right"
+            android:layout_above="@+id/linearlayout"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="0.68" />
+    </LinearLayout>
+        </RelativeLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add to Basket"
+        android:id="@+id/btnAdd"
+        android:layout_below="@id/items"
+        android:background="@color/back"
+        android:textColor="@color/white"
+        android:onClick="addToCart"
+        />
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.cebs.pingfood.ItemActivity"
+        android:fitsSystemWindows="true"
+
+        >
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cart"
+            android:layout_gravity="bottom|right"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:text="0"
+            android:textSize="20dp"
+            android:elevation="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginBottom="18dp"
+            android:layout_marginRight="22dp"
+
+            android:id="@+id/carttitle"
+
+            />
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>
